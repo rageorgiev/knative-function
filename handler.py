@@ -8,7 +8,7 @@ def handler(context, inputs):
     outputs = {
       "greeting": greeting
     }
-    slackMsg = ':label: Tag VM action! tag: "' + tag + '".'
+    slackMsg = ':label: Tag VM action! tag: "' + greeting + '".'
     body = {
      "channel": "#rado-demo",
      "username": "ABX",
