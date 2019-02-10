@@ -2,7 +2,7 @@ import requests
 import json
 
 def handler(context, inputs):
-    greeting = "Hello, {0}!".format(inputs["target"])
+    greeting = "Hello, dasdas {0}!".format(inputs["target"])
     print(greeting)
 
     outputs = {
