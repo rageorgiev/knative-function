@@ -8,13 +8,16 @@ def handler(context, inputs):
     outputs = {
       "greeting": greeting
     }
-    slackMsg = ':label: Tag VM action! tag: "' + greeting + '".'
-    body = {
-     "channel": "#rado-demo",
-     "username": "ABX",
-     "text": slackMsg,
-     "icon_emoji": ":bell:"
-    }
-    requests.post('https://hooks.slack.com/services/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', data=json.dumps(body), verify=False)
+    try:
+        slackMsg = ':label: Tag VM action! tag: "' + greeting + '".'
+        body = {
+         "channel": "#rado-demo",
+         "username": "ABX",
+         "text": slackMsg,
+         "icon_emoji": ":bell:"
+        }
+        requests.post('https://hooks.slack.com/services/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', data=json.dumps(body), verify=False)
+    except Error as er:
+        print(er)
 
     return outputs
