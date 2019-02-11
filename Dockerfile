@@ -5,4 +5,4 @@ COPY requirements.txt /function/
 
 RUN pip install -r /function/requirements.txt
 
-CMD SERVER_CMD="python3 /function-server/main.py handler._HANDLDER_" ./funky
+CMD SERVER_CMD="python3 /function-server/main.py handler.handler" ./funky
