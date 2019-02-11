@@ -17,6 +17,7 @@ def handler(context, inputs):
          "icon_emoji": ":bell:"
         }
         requests.post('https://hooks.slack.com/services/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', data=json.dumps(body), verify=False)
+        return outputs
     except Error as er:
         print(er)
 
