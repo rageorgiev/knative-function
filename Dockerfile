@@ -5,4 +5,6 @@ COPY requirements.txt /function/
 
 RUN pip install -r /function/requirements.txt
 
+ENV TIMEOUT=60000
+
 CMD SERVER_CMD="python3 /function-server/main.py handler.handler" ./funky
