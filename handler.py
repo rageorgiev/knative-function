@@ -1,4 +1,3 @@
-
 import requests
 import json
 
@@ -20,3 +19,4 @@ def handler(context, inputs):
     requests.post('https://hooks.slack.com/services/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', data=json.dumps(body), verify=False)
 
     return outputs
+
